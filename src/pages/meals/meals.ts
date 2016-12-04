@@ -15,17 +15,12 @@ export class Meals {
 
   initializeItems() {
     this.items = [
-      { 'name': 'Vietnamese Pho 0', 'description': 'delicious poop', 'imgName': 'pho.jpg' },
-      { 'name': 'Vietnamese Pho 1', 'description': 'delicious poop', 'imgName': 'pho.jpg' },
-      { 'name': 'Vietnamese Pho 2', 'description': 'delicious poop', 'imgName': 'pho.jpg' },
-      { 'name': 'Vietnamese Pho 3', 'description': 'delicious poop', 'imgName': 'pho.jpg' },
-      { 'name': 'Vietnamese Pho 4', 'description': 'delicious poop', 'imgName': 'pho.jpg' },
-      { 'name': 'Vietnamese Pho 5', 'description': 'delicious poop', 'imgName': 'pho.jpg' },
-      { 'name': 'Vietnamese Pho 6', 'description': 'delicious poop', 'imgName': 'pho.jpg' },
-      { 'name': 'Vietnamese Pho 7', 'description': 'delicious poop', 'imgName': 'pho.jpg' },
-      { 'name': 'Vietnamese Pho 8', 'description': 'delicious poop', 'imgName': 'pho.jpg' },
-      { 'name': 'Vietnamese Pho 9', 'description': 'delicious poop', 'imgName': 'pho.jpg' },
-      { 'name': 'Vietnamese Pho 10', 'description': 'delicious poop', 'imgName': 'pho.jpg' }
+      { 'name': 'Vietnamese Pho', 'description': 'Zesty noodles in broth!', 'imgName': 'pho.jpg' },
+      {'name': 'Spaghetti Bolognaise', 'description': 'An italian classic', 'imgName': 'bolognaise.jpg'},
+      {'name': 'Chicken Tikka Masala', 'description': 'A delicious taste of India', 'imgName': 'chicken-tikka.jpg'},
+      {'name': 'Butternut Squash Soup', 'description': 'Warm up in Winter with this delicious creamy meal', 'imgName': 'squash-soup.jpg'},
+      {'name': 'Cheese Omelette', 'description': 'The perfect eggy brunch', 'imgName': 'cheese-omelette.jpg'},
+      {'name': 'Falafel', 'description': 'Crispy, delicious nuggets of joy', 'imgName': 'falafel.jpg'}
     ];
   }
 

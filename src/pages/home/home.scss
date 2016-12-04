@@ -1,3 +1,17 @@
 home {
+  .circle {
+    margin: 10px;
+    background-color: #e6faff;
+    border: 1px solid #8dd5ff;
+    border-radius: 50%;
+    text-align: center;
+    color: #32b3ff;
+  }
+  .circle-icon{
+    font-size: 100px;
+  }
+  .circle-text{
+    margin-top: -10px;
+  }
 
 }

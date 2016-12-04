@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>μManager</ion-title>
+    <ion-title>Signup</ion-title>
     <button ion-button menuToggle right>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -8,6 +8,80 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Signup</h3>
-  <p>Image icon link to add meal</p>
+  <ion-grid>
+      <ion-row>
+          <ion-col width-75>
+            <ion-item>
+                <ion-label>Username</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+          </ion-col>
+
+          <ion-col width-25>
+            <img src="https://i.imgur.com/334LOGY.jpg">
+          </ion-col>
+      </ion-row>
+
+        <ion-row>
+          <ion-segment>
+              <ion-segment-button value="new">
+                  Metric
+              </ion-segment-button>
+              <ion-segment-button value="hot">
+                  Imperial
+              </ion-segment-button>
+          </ion-segment>
+      </ion-row>
+
+      <ion-row>
+          <div style="height: 2vh"></div>
+      </ion-row>
+      <ion-row>
+          <ion-list>
+              <ion-item>
+                  <ion-label fixed>Weight</ion-label>
+                  <ion-input type="text" value=""></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label fixed>Height</ion-label>
+                  <ion-input type="text"></ion-input>
+              </ion-item>
+          </ion-list>
+      </ion-row>
+
+      <ion-row>
+          <ion-col width-100>
+          <ion-list>
+        <ion-item>
+            <ion-label>Vegetarian</ion-label>
+            <ion-toggle disabled checked="false"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label>Vegan</ion-label>
+            <ion-toggle disabled checked="false"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label>Lactose Intolerant</ion-label>
+            <ion-toggle disabled checked="false"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label>Coeliac</ion-label>
+            <ion-toggle disabled checked="false"></ion-toggle>
+        </ion-item>
+          </ion-list>
+      </ion-col>
+      </ion-row>
+
+    <ion-row>
+        <ion-col width-50>
+            <button ion-button full>Facebook</button>
+        </ion-col>
+
+        <ion-col width-50>
+            <button ion-button full>Google+</button>
+        </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
 </ion-content>

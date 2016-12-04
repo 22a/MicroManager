@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
+import { MealsModal } from './MealsModal';
 
 @Component({
   selector: 'meals',
@@ -9,7 +10,7 @@ import { NavController } from 'ionic-angular';
 export class Meals {
   items;
 
-  constructor() {
+  constructor(public modalCtrl: ModalController) {
     this.initializeItems();
   }
 
@@ -38,4 +39,12 @@ export class Meals {
       })
     }
   }
+
+  // modular modals
+  openModal() {
+
+    let modal = this.modalCtrl.create(MealsModal);
+    modal.present();
+  }
 }
+

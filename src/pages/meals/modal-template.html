@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{ meal.name }}
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span color="primary" >Cancel</span>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-card>
+  <img src="img/{{ meal.imgName }}" style="border-radius:5px;"/>
+  <ion-card-content>
+    <ion-card-title>{{ meal.name }}</ion-card-title>
+    <p>{{ meal.description }}</p>
+    <ol>
+      <li *ngFor="let step of meal.recipe">
+        {{ step }}
+      </li>
+    </ol>
+  </ion-card-content>
+</ion-card>
+</ion-content>

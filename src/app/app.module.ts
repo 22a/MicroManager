@@ -5,7 +5,7 @@ import { MyApp } from './app.component';
 import { Home } from '../pages/home/home';
 import { Leaderboard } from '../pages/leaderboard/Leaderboard';
 import { Record } from '../pages/record/Record';
-import { Suggest } from '../pages/suggest/Suggest';
+import { Meals } from '../pages/meals/Meals';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { Suggest } from '../pages/suggest/Suggest';
     Home,
     Leaderboard,
     Record,
-    Suggest
+    Meals
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -24,7 +24,7 @@ import { Suggest } from '../pages/suggest/Suggest';
     Home,
     Leaderboard,
     Record,
-    Suggest
+    Meals
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

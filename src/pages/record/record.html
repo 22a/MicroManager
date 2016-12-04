@@ -1,12 +1,60 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>record</ion-title>
+    <ion-title>Record a Meal</ion-title>
     <button ion-button menuToggle right>
       <ion-icon name="menu"></ion-icon>
     </button>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>record a damn meal</h3>
+<ion-content>
+
+  <div padding>
+    <ion-segment [(ngModel)]="mealType">
+      <ion-segment-button value="mains">
+        Mains
+      </ion-segment-button>
+      <ion-segment-button value="sides">
+        Sides
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="mealType">
+    <ion-grid *ngSwitchCase="'mains'">
+      <ion-row>
+        <ion-searchbar (ionInput)="getMains($event)"></ion-searchbar>
+      </ion-row>
+      <ion-row>
+        <ion-list style="width:100%;" radio-group>
+          <ion-item *ngFor="let item of mains" style="width:100%;">
+            <ion-label>{{ item.name }}</ion-label>
+            <ion-radio value="{{item.name}}"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid *ngSwitchCase="'sides'">
+      <ion-row>
+        <ion-searchbar (ionInput)="getSides($event)"></ion-searchbar>
+      </ion-row>
+      <ion-row>
+        <ion-list style="width:100%;">
+          <ion-item *ngFor="let item of sides" style="width:100%;">
+            <h2>{{ item.name }}</h2>
+            <p>{{ item.description }}</p>
+          </ion-item>
+        </ion-list>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <ion-fab right bottom (click)="goToHome()">
+    <button ion-fab color="primary"><ion-icon name="arrow-dropright"></ion-icon></button>
+    <ion-fab-list side="left">
+    </ion-fab-list>
+  </ion-fab>
+
+
 </ion-content>

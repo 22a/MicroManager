@@ -15,7 +15,7 @@ import { Meals } from '../pages/meals/Meals';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Home;
+  rootPage: any = Signup;
 
   pages: Array<{title: string, component: any}>;
 

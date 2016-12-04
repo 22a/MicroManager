@@ -8,14 +8,41 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>μManager Home screen</h3>
+  <ion-grid>
+    <ion-row class="home-graph">
+      <ion-col width-100>
+        <img src="img/home-graph.png"/>
+      </ion-col>
+    </ion-row>
 
-  <p>Graphs will go here</p>
+    <ion-row style="height: 25vh;">
+      <ion-col width-45 offset-5 class="circle" (click)="goToToday()">
+        <ion-icon name="calendar-outline" class="circle-icon"></ion-icon>
+        <div class="circle-text">
+          Today
+        </div>
+      </ion-col>
+      <ion-col width-45 offset-5 class="circle" (click)="goToLeaderboard()">
+        <ion-icon name="list-box-outline" class="circle-icon"></ion-icon>
+        <div class="circle-text">
+          Leaderboard
+        </div>
+      </ion-col>
+    </ion-row>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-
-  <p>Image icon link to today</p>
-  <p>Image icon link to leaderboard</p>
-  <p>Image icon link to meal finder</p>
-  <p>Image icon link to add meal</p>
+    <ion-row style="height: 25vh;">
+      <ion-col width-45 class="circle" (click)="goToMeals()">
+        <ion-icon name="clipboard-outline" class="circle-icon"></ion-icon>
+        <div class="circle-text">
+          Meals
+        </div>
+      </ion-col>
+      <ion-col width-45 class="circle" (click)="goToRecord()">
+        <ion-icon name="add-circle-outline" class="circle-icon"></ion-icon>
+        <div class="circle-text">
+          Record a Meal
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

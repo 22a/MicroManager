@@ -16,7 +16,7 @@ export class Meals {
 
   initializeItems() {
     this.items = [
-      { 'name': 'Vietnamese Pho', 'description': 'Zesty noodles in broth!', 'imgName': 'pho.jpg' },
+      {'name': 'Vietnamese Pho', 'description': 'Zesty noodles in broth!', 'imgName': 'pho.jpg' },
       {'name': 'Spaghetti Bolognaise', 'description': 'An italian classic', 'imgName': 'bolognaise.jpg'},
       {'name': 'Chicken Tikka Masala', 'description': 'A delicious taste of India', 'imgName': 'chicken-tikka.jpg'},
       {'name': 'Butternut Squash Soup', 'description': 'Warm up in Winter with this delicious creamy meal', 'imgName': 'squash-soup.jpg'},

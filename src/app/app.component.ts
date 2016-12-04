@@ -27,7 +27,7 @@ export class MyApp {
       { title: 'Home', component: Home },
       { title: 'Leaderboard', component: Leaderboard },
       { title: 'Record', component: Record },
-      { title: 'Signup', component: Signup }
+      { title: 'Signup', component: Signup },
       { title: 'Meals', component: Meals }
     ];
 

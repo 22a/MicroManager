@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 // import { Today } from '../today/Today';
 import { Leaderboard } from '../leaderboard/Leaderboard';
-// import { Meals } from '../meals/Meals';
+import { Meals } from '../meals/Meals';
 import { Record } from '../record/Record';
 
 @Component({
@@ -23,8 +23,7 @@ export class Home {
     this.navCtrl.push(Leaderboard);
   }
   goToMeals(){
-    // this.navCtrl.push(Meals);
-    console.log("meal page doesn't exist yet, when it does uncomment the above");
+    this.navCtrl.push(Meals);
   }
   goToRecord(){
     this.navCtrl.push(Record);

@@ -7,6 +7,7 @@ import { Leaderboard } from '../pages/leaderboard/Leaderboard';
 import { Record } from '../pages/record/Record';
 import { Signup } from '../pages/signup/Signup';
 import { Meals } from '../pages/meals/Meals';
+import { MealsModal } from '../pages/meals/MealsModal';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { Meals } from '../pages/meals/Meals';
     Leaderboard,
     Record,
     Signup,
-    Meals
+    Meals,
+    MealsModal
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -27,7 +29,8 @@ import { Meals } from '../pages/meals/Meals';
     Leaderboard,
     Record,
     Signup,
-    Meals
+    Meals,
+    MealsModal
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

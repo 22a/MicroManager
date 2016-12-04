@@ -9,41 +9,41 @@
 
 <ion-content>
 
-  <div padding>
+  <div>
     <ion-segment [(ngModel)]="mealType">
-      <ion-segment-button value="mains">
+      <ion-segment-button value="mains" class="no-radius">
         Mains
       </ion-segment-button>
-      <ion-segment-button value="sides">
+      <ion-segment-button value="sides" class="no-radius">
         Sides
       </ion-segment-button>
     </ion-segment>
   </div>
 
   <div [ngSwitch]="mealType">
-    <ion-grid *ngSwitchCase="'mains'">
+    <ion-grid *ngSwitchCase="'mains'" class="no-pad">
       <ion-row>
         <ion-searchbar (ionInput)="getMains($event)"></ion-searchbar>
       </ion-row>
       <ion-row>
         <ion-list style="width:100%;" radio-group>
           <ion-item *ngFor="let item of mains" style="width:100%;">
-            <ion-label>{{ item.name }}</ion-label>
-            <ion-radio value="{{item.name}}"></ion-radio>
+            <ion-label>{{ item }}</ion-label>
+            <ion-radio value="{{item}}"></ion-radio>
           </ion-item>
         </ion-list>
       </ion-row>
     </ion-grid>
 
-    <ion-grid *ngSwitchCase="'sides'">
+   <ion-grid *ngSwitchCase="'sides'" class="no-pad">
       <ion-row>
         <ion-searchbar (ionInput)="getSides($event)"></ion-searchbar>
       </ion-row>
       <ion-row>
         <ion-list style="width:100%;">
           <ion-item *ngFor="let item of sides" style="width:100%;">
-            <h2>{{ item.name }}</h2>
-            <p>{{ item.description }}</p>
+            <ion-label>{{ item }}</ion-label>
+            <ion-radio value="{{item}}"></ion-radio>
           </ion-item>
         </ion-list>
       </ion-row>

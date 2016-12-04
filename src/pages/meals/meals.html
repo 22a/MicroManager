@@ -7,16 +7,13 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <button ion-button full color="secondary" (click)="openModal()" class="no-margin">
+    Fill my bars!
+  </button>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
   <ion-grid>
-    <ion-row>
-      <button ion-button block color="secondary" (click)="openModal()">
-        Fill my bars!
-      </button>
-    </ion-row>
-    <ion-row>
-      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-    </ion-row>
     <ion-row>
       <ion-list style="width:100%;">
         <ion-item *ngFor="let item of items" style="width:100%;">

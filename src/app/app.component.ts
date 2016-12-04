@@ -23,14 +23,15 @@ export class MyApp {
   constructor(public platform: Platform) {
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
+    // some of these are just here for show, nav to home when clicked
     this.pages = [
       { title: 'Home', component: Home },
       { title: 'Leaderboard', component: Leaderboard },
-      { title: 'Record', component: Record },
-      { title: 'Signup', component: Signup },
+      { title: 'Today', component: Today },
+      { title: 'Record a Meal', component: Record },
       { title: 'Meals', component: Meals },
-      { title: 'Today', component: Today }
+      { title: 'Settings', component: Home },
+      { title: 'Add Friends', component: Home }
     ];
 
   }

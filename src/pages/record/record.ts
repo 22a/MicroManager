@@ -18,30 +18,11 @@ export class Record {
   }
 
   initializeMains() {
-    this.mains = [
-      {'name': 'Beef', 'description': 'Zesty noodles in broth!'},
-      {'name': 'Chicken', 'description': 'An italian classic'},
-      {'name': 'Lamb', 'description': 'A delicious taste of India'},
-      {'name': 'Chickpeas', 'description': 'Warm up in Winter with this delicious creamy meal'},
-      {'name': 'Monkfish', 'description': 'The perfect eggy brunch'},
-      {'name': 'Beef', 'description': 'Zesty noodles in broth!'},
-      {'name': 'Chicken', 'description': 'An italian classic'},
-      {'name': 'Lamb', 'description': 'A delicious taste of India'},
-      {'name': 'Chickpeas', 'description': 'Warm up in Winter with this delicious creamy meal'},
-      {'name': 'Monkfish', 'description': 'The perfect eggy brunch'},
-      {'name': 'Pulses', 'description': 'Crispy, delicious nuggets of joy'}
-    ];
+    this.mains = this.shuffle([ 'Beef', 'Beef Heart', 'Beef Liver', 'Beef Tongue', 'Bone Soup', 'Buffalo', 'Bison', 'Calf liver', 'Caribou', 'Goat', 'Ham', 'Horse', 'Kangaroo', 'Lamb', 'Marrow soup', 'Moose', 'Mutton', 'Opossum', 'Organ Meats', 'Pork', 'Pork', 'Bacon', 'Rabbit', 'Snake', 'Squirrel', 'Sweetbreads', 'Tripe', 'Turtle', 'Veal', 'Venison', 'Chicken', 'Chicken Liver', 'Cornish Game Hen', 'Duck', 'Duck Liver', 'Emu', 'Gizzards', 'Goose', 'Goose Liver', 'Grouse', 'Guinea Hen', 'Liver', 'Organs', 'Ostrich', 'Partridge', 'Pheasant', 'Quail', 'Squab', 'Turkey', 'Monkfish', 'Pulses' ]);
   }
 
   initializeSides() {
-    this.sides = [
-      {'name': 'Vietnamese Pho', 'description': 'Zesty noodles in broth!'},
-      {'name': 'Spaghetti Bolognaise', 'description': 'An italian classic'},
-      {'name': 'Chicken Tikka Masala', 'description': 'A delicious taste of India'},
-      {'name': 'Butternut Squash Soup', 'description': 'Warm up in Winter with this delicious creamy meal'},
-      {'name': 'Cheese Omelette', 'description': 'The perfect eggy brunch'},
-      {'name': 'Falafel', 'description': 'Crispy'}
-    ];
+    this.sides = this.shuffle([ 'Aavakaaya', 'Arab salad', 'Baba ghanoush', 'Biryani', 'Borscht', 'Broccoli slaw', 'Cabbage roll', 'Caesar salad', 'Caldo verde', 'Caprese salad', 'Carrot salad', 'Ciambotta', 'Chile relleno', 'Chiles en nogada', 'Coleslaw', 'Collard liquor', 'Confit byaldi', 'Corn chowder', 'Crudités', 'Cucumber soup', 'Ema datshi', 'Főzelék', 'Fried aubergine', 'Fried cauliflower', 'Ful medames', 'Gado-gado', 'Garden salad', 'Ghormeh sabzi', 'Giardiniera', 'Glasswort salad', 'Goma-ae', 'Greek salad', 'Green papaya salad', 'Green bean casserole', 'Guacamole', 'Hodge-Podge (soup)', 'İmam bayıldı', 'Israeli salad', 'Jalapeño popper', 'Janssons frestelse', 'Karedok', 'Kimchi', 'Kinilnat', 'Kosambari', 'Kuluban', 'Lawar (food)', 'Lecsó', 'Lettuce sandwich', 'Maple slaw', 'Mashed pumpkin', 'Mattar paneer', 'Meigan cai', 'Mixed pickle', 'Onion ring', 'Pao cai', 'Pasta primavera', 'Pea soup', 'Piccalilli', 'Pickled cucumber', 'Pico de gallo', 'Potato salad', 'Ratatouille', 'Rojak', 'Salad Niçoise', 'Salsa (sauce)', 'Samlar machu', 'Sauerkraut', 'Senate bean soup', 'Sicilian orange salad', 'Sorrel soup', 'Spinach salad', 'Spreewald gherkins', 'Stuffed peppers', 'Stuffed zucchini', 'Suan cai', 'Sweet potato pie', 'Sweet sour and spicy vegetable gravy', 'Tabbouleh', 'Texas caviar', 'Thai salads', 'Tianjin preserved vegetable', 'Tomato omelette', 'Tomato soup', 'Turnip cake', 'Ulam (salad)', 'Urap', 'Utan', 'Vegetable chips', 'Vegetable sandwich', 'Vegetable tarkari', 'Vegetarian chili', 'Vichyssoise', 'Waldorf salad', 'Zha cai' ]);
   }
 
   getMains(ev) {
@@ -54,7 +35,7 @@ export class Record {
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
       this.mains = this.mains.filter((item) => {
-        return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
   }
@@ -69,10 +50,18 @@ export class Record {
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
       this.sides = this.sides.filter((item) => {
-        return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
   }
+
+  shuffle(a) {
+    for (let i = a.length; i; i--) {
+      let j = Math.floor(Math.random() * i);
+      [a[i - 1], a[j]] = [a[j], a[i - 1]];
+    }
+    return a;
+  };
 
   goToHome() {
     this.navCtrl.setRoot(Home);

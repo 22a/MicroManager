@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
-// import { Today } from '../today/Today';
+import { Today } from '../today/Today';
 import { Leaderboard } from '../leaderboard/Leaderboard';
 import { Meals } from '../meals/Meals';
 import { Record } from '../record/Record';
@@ -16,8 +16,7 @@ export class Home {
   }
 
   goToToday(){
-    // this.navCtrl.push(Today);
-    console.log("today page doesn't exist yet, when it does uncomment the above");
+    this.navCtrl.push(Today);
   }
   goToLeaderboard(){
     this.navCtrl.push(Leaderboard);

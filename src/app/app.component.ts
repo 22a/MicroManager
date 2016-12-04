@@ -6,6 +6,7 @@ import { Home } from '../pages/home/home';
 import { Leaderboard } from '../pages/leaderboard/Leaderboard';
 import { Record } from '../pages/record/Record';
 import { Suggest } from '../pages/suggest/Suggest';
+import { Signup } from '../pages/signup/Signup';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { Suggest } from '../pages/suggest/Suggest';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Home;
+  rootPage: any = Signup;
 
   pages: Array<{title: string, component: any}>;
 
@@ -26,7 +27,8 @@ export class MyApp {
       { title: 'Home', component: Home },
       { title: 'Leaderboard', component: Leaderboard },
       { title: 'Record', component: Record },
-      { title: 'Suggest', component: Suggest }
+      { title: 'Suggest', component: Suggest },
+      { title: 'Signup', component: Signup }
     ];
 
   }

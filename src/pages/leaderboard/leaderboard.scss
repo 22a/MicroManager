@@ -1,3 +1,13 @@
 Leaderboard {
-
+  .place {
+    font-weight: 800;
+    font-size: 24px;
+  }
+  .no-pad {
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+  .no-border {
+    border: 0px !important;
+  }
 }

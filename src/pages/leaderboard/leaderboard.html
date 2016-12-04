@@ -9,15 +9,30 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
+    <ion-item *ngFor="let person of people; let i = index">
+      <ion-avatar item-left>
+        <img src="{{person.avatar}}">
+      </ion-avatar>
+      <h2><span class="place">{{i+1}}</span> {{person.name}}</h2>
       <div class="item-note" item-right>
-        {{item.note}}
+        {{person.percent}}
       </div>
-    </button>
+    </ion-item>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-list class="no-pad">
+      <ion-item class="no-border">
+        <ion-avatar item-left>
+          <img src="{{you.avatar}}">
+        </ion-avatar>
+        <h2><span class="place">{{you.place}}</span> {{you.name}}</h2>
+        <div class="item-note" item-right>
+          {{you.percent}}
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-toolbar>
+</ion-footer>

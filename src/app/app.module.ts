@@ -6,6 +6,7 @@ import { Home } from '../pages/home/home';
 import { Leaderboard } from '../pages/leaderboard/Leaderboard';
 import { Record } from '../pages/record/Record';
 import { Suggest } from '../pages/suggest/Suggest';
+import { Signup } from '../pages/signup/Signup';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { Suggest } from '../pages/suggest/Suggest';
     Home,
     Leaderboard,
     Record,
-    Suggest
+    Suggest,
+    Signup
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -24,7 +26,8 @@ import { Suggest } from '../pages/suggest/Suggest';
     Home,
     Leaderboard,
     Record,
-    Suggest
+    Suggest,
+    Signup
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

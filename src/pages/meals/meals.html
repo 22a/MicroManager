@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Meal Finder</ion-title>
+    <button ion-button menuToggle right>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <button ion-button block color="secondary">
+        Fill my bars!
+      </button>
+    </ion-row>
+    <ion-row>
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    </ion-row>
+    <ion-row>
+      <ion-list style="width:100%;">
+        <ion-item *ngFor="let item of items" style="width:100%;">
+          <ion-thumbnail item-left>
+            <img src="img/{{item.imgName}}" style="border-radius:5px;">
+          </ion-thumbnail>
+          <h2>{{ item.name }}</h2>
+          <p>{{ item.description }}</p>
+          <button ion-button clear item-right>View</button>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+  </ion-grid>
+</ion-content>

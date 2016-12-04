@@ -5,8 +5,8 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { Home } from '../pages/home/home';
 import { Leaderboard } from '../pages/leaderboard/Leaderboard';
 import { Record } from '../pages/record/Record';
-import { Suggest } from '../pages/suggest/Suggest';
 import { Signup } from '../pages/signup/Signup';
+import { Meals } from '../pages/meals/Meals';
 
 
 @Component({
@@ -15,7 +15,7 @@ import { Signup } from '../pages/signup/Signup';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Signup;
+  rootPage: any = Home;
 
   pages: Array<{title: string, component: any}>;
 
@@ -27,8 +27,8 @@ export class MyApp {
       { title: 'Home', component: Home },
       { title: 'Leaderboard', component: Leaderboard },
       { title: 'Record', component: Record },
-      { title: 'Suggest', component: Suggest },
-      { title: 'Signup', component: Signup }
+      { title: 'Signup', component: Signup },
+      { title: 'Meals', component: Meals }
     ];
 
   }

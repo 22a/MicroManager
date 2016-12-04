@@ -5,8 +5,8 @@ import { MyApp } from './app.component';
 import { Home } from '../pages/home/home';
 import { Leaderboard } from '../pages/leaderboard/Leaderboard';
 import { Record } from '../pages/record/Record';
-import { Suggest } from '../pages/suggest/Suggest';
 import { Signup } from '../pages/signup/Signup';
+import { Meals } from '../pages/meals/Meals';
 
 @NgModule({
   declarations: [
@@ -14,8 +14,8 @@ import { Signup } from '../pages/signup/Signup';
     Home,
     Leaderboard,
     Record,
-    Suggest,
-    Signup
+    Signup,
+    Meals
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -26,8 +26,8 @@ import { Signup } from '../pages/signup/Signup';
     Home,
     Leaderboard,
     Record,
-    Suggest,
-    Signup
+    Signup,
+    Meals
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

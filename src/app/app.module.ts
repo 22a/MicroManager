@@ -8,6 +8,7 @@ import { Record } from '../pages/record/Record';
 import { Signup } from '../pages/signup/Signup';
 import { Meals } from '../pages/meals/Meals';
 import { MealsModal } from '../pages/meals/MealsModal';
+import { Today } from '../pages/today/Today';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MealsModal } from '../pages/meals/MealsModal';
     Record,
     Signup,
     Meals,
-    MealsModal
+    MealsModal,
+    Today
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -30,7 +32,8 @@ import { MealsModal } from '../pages/meals/MealsModal';
     Record,
     Signup,
     Meals,
-    MealsModal
+    MealsModal,
+    Today
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

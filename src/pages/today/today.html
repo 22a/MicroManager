@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Today</ion-title>
+    <button ion-button menuToggle right>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-40>
+        <img src="img/progress-circle.png" >
+      </ion-col>
+      <ion-col width-60>
+        <h4 style="margin-top: 59px;">of your Micro RDAs!</h4>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let micro of micros" style="margin-bottom:1px;">
+      <ion-col width-20 style="font-weight:500;">{{ micro.name }}</ion-col>
+      <ion-col style="background-color:#7abe23;" [style.flex]="'0 0 ' +  micro.width" [style.maxWidth]="micro.width">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

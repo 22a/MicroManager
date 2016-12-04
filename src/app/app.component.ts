@@ -7,6 +7,7 @@ import { Leaderboard } from '../pages/leaderboard/Leaderboard';
 import { Record } from '../pages/record/Record';
 import { Signup } from '../pages/signup/Signup';
 import { Meals } from '../pages/meals/Meals';
+import { Today } from '../pages/today/Today';
 
 
 @Component({
@@ -28,7 +29,8 @@ export class MyApp {
       { title: 'Leaderboard', component: Leaderboard },
       { title: 'Record', component: Record },
       { title: 'Signup', component: Signup },
-      { title: 'Meals', component: Meals }
+      { title: 'Meals', component: Meals },
+      { title: 'Today', component: Today }
     ];
 
   }

@@ -1,3 +1,28 @@
 signup {
-
+  .circle-icon{
+    font-size: 50px;
+    margin-top: -10px;
+  }
+  .upload-container {
+    background-color: white;
+    border: 1px solid #387ef5;
+    border-radius: 50%;
+    text-align: center;
+    color: #387ef5;
+    text-align: center;
+  }
+  .upload-row{
+    height: 92px;
+  }
+  .upload-text{
+    margin-top: -10px;
+  }
+  .social-text{
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: -10px;
+  }
+  .upload-inputs{
+    margin-top: 2px !important;
+  }
 }

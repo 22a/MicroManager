@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, PopoverController } from 'ionic-angular';
+import { TodayPop } from './TodayPop'
 
 @Component({
   selector: 'today',
@@ -9,7 +10,7 @@ import { NavController } from 'ionic-angular';
 export class Today{
   micros;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public popoverCtrl: PopoverController) {
     this.micros = [
       { 'name': 'Zinc', 'width': '83%' },
       { 'name': 'Calcium', 'width': '80%' },
@@ -24,5 +25,10 @@ export class Today{
       { 'name': 'Boron', 'width': '8%' },
       { 'name': 'Teeth', 'width': '5%' }
     ]
+  }
+
+  presentPopover() {
+    let popover = this.popoverCtrl.create(TodayPop);
+    popover.present();
   }
 }

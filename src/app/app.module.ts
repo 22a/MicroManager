@@ -9,6 +9,7 @@ import { Signup } from '../pages/signup/Signup';
 import { Meals } from '../pages/meals/Meals';
 import { MealsModal } from '../pages/meals/MealsModal';
 import { Today } from '../pages/today/Today';
+import { TodayPop } from '../pages/today/TodayPop';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Today } from '../pages/today/Today';
     Signup,
     Meals,
     MealsModal,
-    Today
+    Today,
+    TodayPop
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -33,7 +35,8 @@ import { Today } from '../pages/today/Today';
     Signup,
     Meals,
     MealsModal,
-    Today
+    Today,
+    TodayPop
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

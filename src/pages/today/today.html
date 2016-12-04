@@ -19,7 +19,7 @@
     </ion-row>
     <ion-row *ngFor="let micro of micros" style="margin-bottom:1px;">
       <ion-col width-20 style="font-weight:500;">{{ micro.name }}</ion-col>
-      <ion-col style="background-color:#7abe23;" [style.flex]="'0 0 ' +  micro.width" [style.maxWidth]="micro.width">
+      <ion-col style="background-color:#7abe23;" [style.flex]="'0 0 ' +  micro.width" [style.maxWidth]="micro.width" (click)="presentPopover()">
       </ion-col>
     </ion-row>
   </ion-grid>

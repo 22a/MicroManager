@@ -5,7 +5,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { Home } from '../pages/home/home';
 import { Leaderboard } from '../pages/leaderboard/Leaderboard';
 import { Record } from '../pages/record/Record';
-import { Suggest } from '../pages/suggest/Suggest';
+import { Meals } from '../pages/meals/Meals';
 
 
 @Component({
@@ -26,7 +26,7 @@ export class MyApp {
       { title: 'Home', component: Home },
       { title: 'Leaderboard', component: Leaderboard },
       { title: 'Record', component: Record },
-      { title: 'Suggest', component: Suggest }
+      { title: 'Meals', component: Meals }
     ];
 
   }

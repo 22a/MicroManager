@@ -4,11 +4,14 @@ home {
   }
   .circle {
     margin: 10px;
-    background-color: #e6faff;
-    border: 1px solid #8dd5ff;
+    background-color: #f7feff;
+    border: 1.5px solid #6cc9ff;
     border-radius: 50%;
     text-align: center;
-    color: #32b3ff;
+    color: #5eb2ff;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,200,0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,200,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 200, 0.2);
   }
   .circle-icon{
     font-size: 100px;

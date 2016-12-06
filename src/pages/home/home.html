@@ -90,13 +90,13 @@
     </ion-row>
 
     <ion-row style="height: 25vh;">
-      <ion-col width-45 offset-5 class="circle" (click)="goToToday()">
+      <ion-col width-45 offset-5 class="circle" (tap)="goToToday()">
         <ion-icon name="calendar-outline" class="circle-icon"></ion-icon>
         <div class="circle-text">
           Today
         </div>
       </ion-col>
-      <ion-col width-45 offset-5 class="circle" (click)="goToLeaderboard()">
+      <ion-col width-45 offset-5 class="circle" (tap)="goToLeaderboard()">
         <ion-icon name="list-box-outline" class="circle-icon"></ion-icon>
         <div class="circle-text">
           Leaderboard
@@ -105,13 +105,13 @@
     </ion-row>
 
     <ion-row style="height: 25vh;">
-      <ion-col width-45 class="circle" (click)="goToMeals()">
+      <ion-col width-45 class="circle" (tap)="goToMeals()">
         <ion-icon name="clipboard-outline" class="circle-icon"></ion-icon>
         <div class="circle-text">
           Meals
         </div>
       </ion-col>
-      <ion-col width-45 class="circle" (click)="goToRecord()">
+      <ion-col width-45 class="circle" (tap)="goToRecord()">
         <ion-icon name="add" class="circle-icon"></ion-icon>
         <div class="circle-text">
           Record a Meal

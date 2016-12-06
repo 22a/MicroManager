@@ -12,18 +12,21 @@ export class Today{
 
   constructor(public navCtrl: NavController, public popoverCtrl: PopoverController) {
     this.micros = [
-      { 'name': 'Zinc', 'width': '83%' },
-      { 'name': 'Calcium', 'width': '80%' },
-      { 'name': 'Sodium', 'width': '78%' },
-      { 'name': 'Teeth', 'width': '75%' },
-      { 'name': 'Zinc', 'width': '69%'},
-      { 'name': 'Sodium', 'width': '55%' },
-      { 'name': 'Iron', 'width': '45%' },
-      { 'name': 'Vital', 'width': '38%' },
-      { 'name': 'Earth', 'width': '25%' },
-      { 'name': 'Oil', 'width': '14%' },
-      { 'name': 'Boron', 'width': '8%' },
-      { 'name': 'Teeth', 'width': '5%' }
+      { 'name': 'Fiber', 'width': '80%', 'color': '#7abe23' },
+      { 'name': 'Zinc', 'width': '80%', 'color': '#7abe23' },
+      { 'name': 'Calcium', 'width': '80%', 'color': '#7abe23' },
+      { 'name': 'Sodium', 'width': '78%', 'color': '#7abe23' },
+      { 'name': 'Protein', 'width': '75%', 'color': '#7abe23' },
+      { 'name': 'Fat', 'width': '71%', 'color': '#7abe23' },
+      { 'name': 'Zinc', 'width': '69%', 'color': '#fecd51' },
+      { 'name': 'Niacin', 'width': '63%', 'color': '#fecd51' },
+      { 'name': 'Sodium', 'width': '55%', 'color': '#fecd51' },
+      { 'name': 'Iron', 'width': '45%', 'color': '#fecd51' },
+      { 'name': 'Vital', 'width': '38%', 'color': '#fecd51' },
+      { 'name': 'Earth', 'width': '25%', 'color': '#dc524a' },
+      { 'name': 'Oil', 'width': '14%', 'color': '#dc524a' },
+      { 'name': 'Boron', 'width': '8%', 'color': '#dc524a' },
+      { 'name': 'Teeth', 'width': '5%', 'color': '#dc524a' }
     ]
   }
 
